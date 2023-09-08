@@ -2,7 +2,6 @@ package com.lic.Springbootinsurancemanagementplatform.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,7 +44,6 @@ public class ClaimController {
 	public ResponseStructure<Claim> updateClaim(@RequestBody Claim claim,@PathVariable int claimId) {
 		return claimService.updateClaim(claim, claimId);
 	}	
-	
 	//displayAllClaim----------------------------------------------------------------------------
 	@GetMapping("/displayAllClaim")
 	public ResponseStructure<List<Claim>> displayAllClaim(){
